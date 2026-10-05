@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from ml_utils import predict_domain, predict_category, predict_priority
 
 
@@ -24,3 +27,4 @@ for complaint in complaints:
     print("Category:", category)
     print("Priority:", priority)
     print("-" * 60)
+

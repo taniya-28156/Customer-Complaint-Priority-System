@@ -1,6 +1,6 @@
 import joblib
 
-model = joblib.load("models/logistic_regression_model.pkl")
+model = joblib.load("../models/logistic_regression_model.pkl")
 
 print("Financial Complaint Categories:")
 print("--------------------------------")

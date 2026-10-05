@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score, classification_report
 
 
 # 1. Load dataset
-df = pd.read_csv("data/domain_complaints.csv")
+df = pd.read_csv("../data/company_complaints.csv")
 
 print("Dataset loaded successfully!")
 print("Total complaints:", len(df))
@@ -16,7 +16,7 @@ print("Total complaints:", len(df))
 
 # 2. Input and output
 X = df["complaint"]
-y = df["domain"]
+y = df["category"]
 
 
 # 3. Train-Test Split
@@ -29,14 +29,14 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 
-# 4. Convert text into numbers
+# 4. Convert text into numbers using TF-IDF
 vectorizer = TfidfVectorizer()
 
 X_train_tfidf = vectorizer.fit_transform(X_train)
 X_test_tfidf = vectorizer.transform(X_test)
 
 
-# 5. Create model
+# 5. Create ML model
 model = LogisticRegression(max_iter=1000)
 
 
@@ -51,17 +51,17 @@ y_pred = model.predict(X_test_tfidf)
 # 8. Accuracy
 accuracy = accuracy_score(y_test, y_pred)
 
-print("\n===== DOMAIN MODEL RESULT =====")
+print("\n===== MODEL RESULT =====")
 print("Accuracy:", accuracy)
 
 
-# 9. Classification report
+# 9. Detailed report
 print("\n===== CLASSIFICATION REPORT =====")
 print(classification_report(y_test, y_pred))
 
 
 # 10. Save model
-joblib.dump(model, "models/domain_model.pkl")
-joblib.dump(vectorizer, "models/domain_tfidf_vectorizer.pkl")
+joblib.dump(model, "../models/company_category_model.pkl")
+joblib.dump(vectorizer, "../models/company_tfidf_vectorizer.pkl")
 
-print("\nDomain model saved successfully!")
+print("\nCompany model saved successfully!")

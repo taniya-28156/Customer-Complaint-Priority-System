@@ -1,8 +1,8 @@
 import joblib
 
 # Load model and vectorizer
-model = joblib.load("models/company_category_model.pkl")
-vectorizer = joblib.load("models/company_tfidf_vectorizer.pkl")
+model = joblib.load("../models/company_category_model.pkl")
+vectorizer = joblib.load("../models/company_tfidf_vectorizer.pkl")
 
 
 complaints = [

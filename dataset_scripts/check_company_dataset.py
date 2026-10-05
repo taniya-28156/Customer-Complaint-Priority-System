@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load dataset
-df = pd.read_csv("data/company_complaints.csv")
+df = pd.read_csv("../data/company_complaints.csv")
 
 print("===== DATASET INFO =====")
 

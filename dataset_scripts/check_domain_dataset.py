@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("data/domain_complaints.csv")
+df = pd.read_csv("../data/domain_complaints.csv")
 
 print("===== DOMAIN DATASET INFO =====")
 

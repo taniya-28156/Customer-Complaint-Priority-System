@@ -259,7 +259,7 @@ data = [
 
 df = pd.DataFrame(data, columns=["complaint", "category"])
 
-df.to_csv("data/company_complaints.csv", index=False)
+df.to_csv("../data/company_complaints.csv", index=False)
 
 print("Dataset created successfully!")
 print("Total complaints:", len(df))
