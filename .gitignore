@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+.env
+history.csv
+*.pyc
+.ipynb_checkpoints/
+complaints.csv
+Customer_Complaint_AI_System_V2.ipynb
+models/*.pkl
+*.pkl
